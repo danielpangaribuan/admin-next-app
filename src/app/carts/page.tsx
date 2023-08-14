@@ -103,7 +103,7 @@ function Carts() {
         },
       },
     ],
-    []
+    [router]
   );
   return (
     <div className="bg-white p-4 rounded overflow-hidden shadow-lg">
