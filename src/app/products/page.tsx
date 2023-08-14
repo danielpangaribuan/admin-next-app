@@ -155,7 +155,7 @@ function Products() {
         Products List
       </h2>
       <div className="flex flex-col gap-y-4 px-4 py-4 border border-neutral-300 rounded-lg my-4">
-        <div className="grid grid-cols-4 gap-x-4">
+        <div className="grid md:grid-cols-4 md:grid-rows-1 sm:grid-rows-4 sm:grid-cols-1 gap-y-2 gap-x-4">
           <div>
             <span className="font-semibold text-base">Brand</span>
             <input
@@ -224,9 +224,9 @@ function Products() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-x-4">
+        <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-x-4">
           <button
-            className="col-end-5 inline-block w-full bg-indigo-700 rounded-md text-white py-2"
+            className="md:col-end-5 sm:col-end-3 inline-block w-full bg-indigo-700 rounded-md text-white py-2"
             onClick={() => submitFilter()}
           >
             Submit
