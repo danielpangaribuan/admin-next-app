@@ -75,7 +75,7 @@ function Products() {
   });
   const [category, setCategory] = useState([]);
 
-  const getDataProduct = (filter: object) => {
+  const getDataProduct = () => {
     const fetchData = async () => {
       const resData = await getProducts(filter);
       setData(resData);
@@ -100,13 +100,13 @@ function Products() {
     const dataFilter = window.localStorage.getItem("PRODUCT_FILTER");
     if (dataFilter !== null) setFilter(JSON.parse(dataFilter));
 
-    getDataProduct(filter);
+    getDataProduct();
     getDateCategory();
   }, []);
 
   const submitFilter = () => {
     window.localStorage.setItem("PRODUCT_FILTER", JSON.stringify(filter));
-    getDataProduct(filter);
+    getDataProduct();
   };
 
   const columns = useMemo<ColumnDef<ColumnKey>[]>(

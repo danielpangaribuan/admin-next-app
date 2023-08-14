@@ -9,7 +9,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState } from "react";
 import * as _ from "lodash";
 
 ChartJS.register(
@@ -29,7 +29,7 @@ async function getDataProduct() {
   return data;
 }
 
-export function Home() {
+function Home() {
   const [labels, setLabels] = useState([]);
   const [dataProduct, setDataProduct] = useState([]);
   const options = {

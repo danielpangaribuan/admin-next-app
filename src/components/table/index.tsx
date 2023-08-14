@@ -1,5 +1,4 @@
 import {
-  Column,
   useReactTable,
   getCoreRowModel,
   getFilteredRowModel,
